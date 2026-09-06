@@ -1,0 +1,17 @@
+$kind: http-request
+name: "{{base_url}}/posts/1"
+description: ""
+url: "{{base_url}}/posts/1"
+method: PUT
+body:
+  type: json
+  content: ""
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });"
+    language: text/javascript
+order: 2838962706722412
